@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurator>
+  <categories>
+    <category id="monitors">
+      <name>Мониторы</name>
+      <icon>monitor</icon>
+      <price_from>499</price_from>
+      <image>https://lh3.googleusercontent.com/aida-public/AB6AXuAAU1plefJY7ZxwM-6Q-4mzHqWZ2o2G-_fO3F2QIT9ooKrp1E8K5_LrIH21rqOsuMvfyjnnimiKdWJV8I-6VtCMVtkH8GGzH_2B_z3-GQRb1Rz8QePGBaZQrQ98BpoqONNQjSL81UFHaUm6w0c6HQ7-T8XXm5ZM6LixZTr7bAbvBeprCtaGLE1A3uIUldFpWP4O-dI9l3-6cHVA49jX-AJDmDtYtRE-kaZxySyIR_TaLkKtvNoredxz3V0LDk6vpJPr0FPeM9cGYQ</image>
+      <products>
+        <product id="mon-1">
+          <name>ASUS ProArt PA32UCG-K</name>
+          <specs>32" 4K HDR, 120Hz, Mini LED</specs>
+          <price>3499</price>
+        </product>
+        <product id="mon-2">
+          <name>Dell UltraSharp U3223QE</name>
+          <specs>32" 4K IPS, USB-C Hub</specs>
+          <price>899</price>
+        </product>
+        <product id="mon-3">
+          <name>LG 27GP950-B</name>
+          <specs>27" 4K Nano IPS, 160Hz, HDMI 2.1</specs>
+          <price>799</price>
+        </product>
+      </products>
+    </category>
+    <category id="keyboards">
+      <name>Клавиатуры</name>
+      <icon>keyboard</icon>
+      <price_from>149</price_from>
+      <image>https://lh3.googleusercontent.com/aida-public/AB6AXuBVulgQHeCjUvOs-Zx1wPkteq66WjlYpD7V2eCUjNQgHNuaXB8G2qCej4IPgsRcFNr3ApMn-sXJXcFqrUQtIYCkAhruCA2Csok7K872hHlDt-AUGRSIuyDRvO9YMwSP0xSeEzAu49B3MOWJ3NWzdLp1IcxH1EkwGfyTC9YuJEyedxttnrJkW1vI5Pa6neB3tq92rg_tnLtQJNWP7ZLKnaLoXAnm-nPRAsaYribsJqTuIpqFGqe-GTZePonhJ7y8y7Cqg-07yUCzFg</image>
+      <products>
+        <product id="kb-1">
+          <name>Keychron Q1 Pro</name>
+          <specs>75%, Gasket Mount, Hot-swap</specs>
+          <price>219</price>
+        </product>
+        <product id="kb-2">
+          <name>HHKB Professional HYBRID</name>
+          <specs>60%, Topre 45g, Bluetooth</specs>
+          <price>349</price>
+        </product>
+      </products>
+    </category>
+    <category id="desks">
+      <name>Столы</name>
+      <icon>table_restaurant</icon>
+      <price_from>899</price_from>
+      <image>https://lh3.googleusercontent.com/aida-public/AB6AXuCGDA88-xZURPqPhUqNKnx7RQ-bi1SYIrToZmCd6JvcUu39pBibfzo33geUKCws1PZek3q5xmyXY5S9ZIdgv0ZnaXWkpKZst4p9_9WD5MMsup3lb-H7DtowBWzHS5agGXu0eyup713sjk4WFUMDY0e9Lq_0fl_evGOiAKGCQsdkMA_jVo5wQwv9cElDKwJq9Qh6MHcqaI-cxShDL6C6lx28jmeFnif7p8nMQLVkLe95K-PmpMkWzOOCIGIsexODCu7SzKC-jXwEeQ</image>
+      <products>
+        <product id="desk-1">
+          <name>Uplift V2 Standing Desk</name>
+          <specs>72"x30", Bamboo, Двухмоторный</specs>
+          <price>1199</price>
+        </product>
+      </products>
+    </category>
+    <category id="audio">
+      <name>Аудио</name>
+      <icon>headset</icon>
+      <price_from>299</price_from>
+      <image>https://lh3.googleusercontent.com/aida-public/AB6AXuB3DgHriV2AV9T7F30zDN27b3p7KTc8Nb-H7Y5zF8QqBUQJO5juzK_LtBJ9p4mD6bt0AwP-XAFBgSXdBsuug1tBg0JSBJN1QhJVUKkpLtK9Uq0P-B432wRatkUPn52DIe2qUFK068-WLi5hFp2FlTpp4kc7aJwln54bI8uCcH_9urB9FTx-7fAtcMbTGk6D466fYAAzdfacfLTrVIs6NDvLYN4jMzq2oWxiWPfSq9zEzv6_GYBRh8Szm25XztVolFFmfi4iQqRz0A</image>
+      <products>
+        <product id="audio-1">
+          <name>Sennheiser HD 660S2</name>
+          <specs>Открытые, 300Ω, Hi-Res Audio</specs>
+          <price>499</price>
+        </product>
+        <product id="audio-2">
+          <name>Audeze LCD-X</name>
+          <specs>Планарно-магнитные, 20Ω</specs>
+          <price>1199</price>
+        </product>
+      </products>
+    </category>
+  </categories>
+</configurator>

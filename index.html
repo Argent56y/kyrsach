@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MONOSPACE — Конфигуратор рабочего места программиста. Профессиональные решения для разработчиков, дизайнеров и геймеров." />
+  <title>MONOSPACE | Конфигуратор рабочего места программиста</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <nav class="top-nav" id="top-nav">
+    <div class="top-nav__logo">MONOSPACE</div>
+    <div class="top-nav__links">
+      <a href="#" class="top-nav__link top-nav__link--active">Главная</a>
+      <a href="#catalog" class="top-nav__link">Каталог</a>
+      <a href="#catalog" class="top-nav__link">Моя сборка</a>
+      <a href="#why" class="top-nav__link">О нас</a>
+    </div>
+    <button class="top-nav__cta" id="cta-build">Собрать ПК</button>
+  </nav>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF6gXHlYfBVXr1qOc54n56Q9eK5dN77QzUNN1YvNHpY08fLaoNVu-aIdpiBW-WTCw7QXw0-OgG_-4K5IvFjwqhJU_uEzXIqc-TLSpueOO8qmuL-ARSQ5vuwto5U0l5wmCrknwQAJUMffc5BrvJbfRBTxtpRKBMa7vfoQJ-xv0kdFLyq8OjDeEEt--8JZHOLK5XpLG0TKcjBPW2fgcNJBa9yLf7qIjJZEDuFFWbO4Le3blUvwqTXIDadaU-DvEQsTdiqvogmEPHsQ" alt="Рабочее место программиста" />
+        <div class="hero__overlay-top"></div>
+        <div class="hero__overlay-sides"></div>
+      </div>
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          <span class="hero__badge-text">Now Live: Precision Configurator v4.2</span>
+        </div>
+        <h1 class="hero__title">
+          Соберите свое идеальное<br />
+          <span class="hero__title-accent">рабочее место</span>
+        </h1>
+        <p class="hero__subtitle">
+          Профессиональные решения для разработчиков, дизайнеров и геймеров. Бескомпромиссная мощность, начиная от $1,299.
+        </p>
+        <div class="hero__actions">
+          <button class="btn btn--amber" id="btn-start-build">
+            Начать сборку
+            <span class="icon-source">arrow_forward</span>
+          </button>
+          <button class="btn btn--ghost" id="btn-catalog">Смотреть каталог</button>
+        </div>
+      </div>
+      <div class="hero__scroll-indicator">
+        <span class="icon-source">keyboard_double_arrow_down</span>
+      </div>
+    </section>
+
+    <section class="section" id="performance">
+      <div class="features">
+        <article class="feature-main">
+          <div style="position: relative; z-index: 10;">
+            <span class="feature-main__label">Engineered for Performance</span>
+            <h2 class="feature-main__title">Точность в каждой детали</h2>
+            <p class="feature-main__desc">
+              Наш конфигуратор учитывает тепловыделение, совместимость размеров и пиковые нагрузки для достижения максимальной стабильности системы.
+            </p>
+          </div>
+          <div class="feature-main__tags">
+            <div class="tag">
+              <span class="icon-source">speed</span>
+              <span>Turbo Boost ready</span>
+            </div>
+            <div class="tag">
+              <span class="icon-source">thermostat</span>
+              <span>Thermal Optimized</span>
+            </div>
+          </div>
+          <img class="feature-main__image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf64W-9gwWUaYM3EGi1idXRgnKjImxg7UmFMMgPa2B-uYFQWtmuX7dZzAZ0MeA2J_oGdUtpxzG6eaZMtAxX9C3kZ1Ktt4fJn4ZBHae0CWxYtNpJOtdDVk7L98Bu2_2NHZYws9loLyOPmy1SqOVj87Yk_INqzxatiyarjKjLeNN8rAb3NeID-iwVGRajCc4nr-sM-24CSqZNfUZiUq4O2CmQRbI289EGQZjScJdHRVJT2XWkU7sVK0BydVWZRdhRDAI7zM4dz0nyQ" alt="Детали сборки ПК" />
+        </article>
+        <aside class="feature-sidebar">
+          <div class="feature-card">
+            <div class="feature-card__icon-wrap feature-card__icon-wrap--violet">
+              <span class="icon-source">memory</span>
+            </div>
+            <h3 class="feature-card__title">Топовое железо</h3>
+            <p class="feature-card__desc">Прямые поставки комплектующих от ведущих производителей NVIDIA, AMD и Intel.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon-wrap feature-card__icon-wrap--amber">
+              <span class="icon-source">palette</span>
+            </div>
+            <h3 class="feature-card__title">Кастомный дизайн</h3>
+            <p class="feature-card__desc">Индивидуальная покраска, кастомные кабели и лазерная гравировка вашего корпуса.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="why">
+      <div class="section__inner">
+        <header class="section__header">
+          <h2 class="section__title">Почему Monospace?</h2>
+          <p class="section__subtitle">The standard of precision</p>
+        </header>
+        <div class="why-grid">
+          <div class="why-item">
+            <div class="why-item__icon">
+              <span class="icon-source">verified_user</span>
+            </div>
+            <h4 class="why-item__title">Высшее качество</h4>
+            <p class="why-item__desc">Используем только проверенные компоненты промышленного класса. Каждый ПК проходит 48-часовой цикл стресс-тестирования.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-item__icon">
+              <span class="icon-source">support_agent</span>
+            </div>
+            <h4 class="why-item__title">Пожизненная поддержка</h4>
+            <p class="why-item__desc">Наша команда инженеров доступна 24/7 для помощи в настройке или решении технических вопросов любой сложности.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-item__icon">
+              <span class="icon-source">hub</span>
+            </div>
+            <h4 class="why-item__title">Полная совместимость</h4>
+            <p class="why-item__desc">Мы гарантируем идеальную работу всех узлов системы. Оптимизация на уровне BIOS под ваши конкретные задачи.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="catalog">
+      <div class="slider">
+        <div class="slider__header">
+          <div>
+            <h2 class="slider__title">Начните с главного</h2>
+            <p class="slider__subtitle">Select your entry point</p>
+          </div>
+          <div class="slider__arrows">
+            <button class="slider__arrow" id="slider-prev" aria-label="Предыдущий слайд">
+              <span class="icon-source">west</span>
+            </button>
+            <button class="slider__arrow" id="slider-next" aria-label="Следующий слайд">
+              <span class="icon-source">east</span>
+            </button>
+          </div>
+        </div>
+        <div class="slider__track" id="slider-track"></div>
+      </div>
+    </section>
+
+    <section class="section" id="benchmarks">
+      <div class="benchmarks">
+        <div class="benchmarks__info">
+          <div>
+            <h2 class="benchmarks__title">Превосходная производительность</h2>
+            <p class="benchmarks__desc">Каждая система проходит 24-часовой стресс-тест перед отправкой клиенту.</p>
+          </div>
+          <div class="benchmarks__bars">
+            <div class="bar">
+              <div class="bar__header">
+                <span>Multi-core Rendering</span>
+                <span class="bar__value">98%</span>
+              </div>
+              <div class="bar__track">
+                <div class="bar__fill" style="width: 98%;"></div>
+              </div>
+            </div>
+            <div class="bar">
+              <div class="bar__header">
+                <span>Thermal Efficiency</span>
+                <span class="bar__value">94%</span>
+              </div>
+              <div class="bar__track">
+                <div class="bar__fill" style="width: 94%;"></div>
+              </div>
+            </div>
+            <div class="bar">
+              <div class="bar__header">
+                <span>Memory Bandwidth</span>
+                <span class="bar__value">89%</span>
+              </div>
+              <div class="bar__track">
+                <div class="bar__fill" style="width: 89%;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="benchmarks__score">
+            <p class="benchmarks__score-label">Global Cinebench Peak</p>
+            <p class="benchmarks__score-value">14,842 <span class="benchmarks__score-unit">pts</span></p>
+          </div>
+        </div>
+        <div class="benchmarks__visual">
+          <div class="benchmarks__circle">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuIx5_nZpg7-ydjcNHRJD6QuupNSn_2jNUi2jOda0aWNE4esgG_KJ1VUVu-RdaX6mIZA6RrDxu42x2W0zqMTejoRrHdLMcciySRwF8ANEXC8Evsv66qCdmgpFSUVltb53KtoC7aV_OYUns6XK7XmayYR9hyRVrxCgW6JuB9yv7YGCrQgIUe8HTNrCgBcdU-YwwSxNNxOAuBMezJZ0e7MXwgHfxubhZBiUnIUSDsVRQhM5URGxoOy0FJae0MlLALe7cY0PPnTQ-2g" alt="Процессор" />
+            <div class="benchmarks__circle-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--community" id="community">
+      <div class="section__inner">
+        <div class="community__header">
+          <div>
+            <h2 class="community__title">Сборки сообщества</h2>
+            <p class="community__subtitle">Inspired by creators</p>
+          </div>
+          <a href="#" class="community__view-all">Смотреть все →</a>
+        </div>
+        <div class="community__grid">
+          <div class="community-card">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9R_P8Lp-Z0g6Vn5lW1y6f_9rK5dN77QzUNN1YvNHpY08fLaoNVu-aIdpiBW-WTCw7QXw0-OgG_-4K5IvFjwqhJU_uEzXIqc-TLSpueOO8qmuL-ARSQ5vuwto5U0l5wmCrknwQAJUMffc5BrvJbfRBTxtpRKBMa7vfoQJ-xv0kdFLyq8OjDeEEt--8JZHOLK5XpLG0TKcjBPW2fgcNJBa9yLf7qIjJZEDuFFWbO4Le3blUvwqTXIDadaU-DvEQsTdiqvogmEPHsQ" alt="Сборка пользователя" />
+            <div class="community-card__overlay">
+              <span class="community-card__user">@alex_dev</span>
+            </div>
+          </div>
+          <div class="community-card">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF6gXHlYfBVXr1qOc54n56Q9eK5dN77QzUNN1YvNHpY08fLaoNVu-aIdpiBW-WTCw7QXw0-OgG_-4K5IvFjwqhJU_uEzXIqc-TLSpueOO8qmuL-ARSQ5vuwto5U0l5wmCrknwQAJUMffc5BrvJbfRBTxtpRKBMa7vfoQJ-xv0kdFLyq8OjDeEEt--8JZHOLK5XpLG0TKcjBPW2fgcNJBa9yLf7qIjJZEDuFFWbO4Le3blUvwqTXIDadaU-DvEQsTdiqvogmEPHsQ" alt="Сборка пользователя" />
+            <div class="community-card__overlay">
+              <span class="community-card__user">@design_studio</span>
+            </div>
+          </div>
+          <div class="community-card">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF6gXHlYfBVXr1qOc54n56Q9eK5dN77QzUNN1YvNHpY08fLaoNVu-aIdpiBW-WTCw7QXw0-OgG_-4K5IvFjwqhJU_uEzXIqc-TLSpueOO8qmuL-ARSQ5vuwto5U0l5wmCrknwQAJUMffc5BrvJbfRBTxtpRKBMa7vfoQJ-xv0kdFLyq8OjDeEEt--8JZHOLK5XpLG0TKcjBPW2fgcNJBa9yLf7qIjJZEDuFFWbO4Le3blUvwqTXIDadaU-DvEQsTdiqvogmEPHsQ" alt="Сборка пользователя" />
+            <div class="community-card__overlay">
+              <span class="community-card__user">@pro_gamer_x</span>
+            </div>
+          </div>
+          <div class="community-card">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF6gXHlYfBVXr1qOc54n56Q9eK5dN77QzUNN1YvNHpY08fLaoNVu-aIdpiBW-WTCw7QXw0-OgG_-4K5IvFjwqhJU_uEzXIqc-TLSpueOO8qmuL-ARSQ5vuwto5U0l5wmCrknwQAJUMffc5BrvJbfRBTxtpRKBMa7vfoQJ-xv0kdFLyq8OjDeEEt--8JZHOLK5XpLG0TKcjBPW2fgcNJBa9yLf7qIjJZEDuFFWbO4Le3blUvwqTXIDadaU-DvEQsTdiqvogmEPHsQ" alt="Сборка пользователя" />
+            <div class="community-card__overlay">
+              <span class="community-card__user">@minimalist_setup</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="testimonials">
+      <div class="testimonials">
+        <h2 class="testimonials__title">Голоса профессионалов</h2>
+        <div class="testimonials__grid">
+          <article class="testimonial-card">
+            <div class="testimonial-card__header">
+              <div class="testimonial-card__avatar"></div>
+              <div>
+                <p class="testimonial-card__name">Дмитрий Волков</p>
+                <p class="testimonial-card__role">Senior Frontend Engineer</p>
+              </div>
+            </div>
+            <p class="testimonial-card__text">"Сборка от Monospace — это лучший инструмент, который у меня когда-либо был. Тихая, невероятно быстрая и выглядит как произведение искусства."</p>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-card__header">
+              <div class="testimonial-card__avatar"></div>
+              <div>
+                <p class="testimonial-card__name">Анна Смирнова</p>
+                <p class="testimonial-card__role">3D Motion Designer</p>
+              </div>
+            </div>
+            <p class="testimonial-card__text">"Рендеринг в Octane стал в 3 раза быстрее. Техподдержка помогла настроить RAID массив за 15 минут через удаленный доступ."</p>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-card__header">
+              <div class="testimonial-card__avatar"></div>
+              <div>
+                <p class="testimonial-card__name">Иван Петров</p>
+                <p class="testimonial-card__role">Data Scientist</p>
+              </div>
+            </div>
+            <p class="testimonial-card__text">"Для работы с ML критически важна стабильность под нагрузкой. Monospace держит температуры идеально даже при недельных вычислениях."</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="faq">
+      <div class="section__inner">
+        <div class="faq">
+          <h2 class="faq__title">Часто задаваемые вопросы</h2>
+          <div class="faq__list" id="faq-list">
+            <div class="faq-item faq-item--open">
+              <button class="faq-item__question" id="faq-q1">
+                <span>Какова средняя стоимость профессиональной сборки?</span>
+                <span class="icon-source">expand_more</span>
+              </button>
+              <div class="faq-item__answer">
+                Наши базовые конфигурации начинаются от $1,299. Средняя стоимость высокопроизводительной рабочей станции для 3D или ML составляет около $3,500 - $4,800.
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-item__question" id="faq-q2">
+                <span>Сколько времени занимает сборка и доставка?</span>
+                <span class="icon-source">expand_more</span>
+              </button>
+              <div class="faq-item__answer">
+                Стандартная сборка занимает 5-7 рабочих дней. Доставка по Беларуси — 2-5 дней в зависимости от региона.
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-item__question" id="faq-q3">
+                <span>Предоставляете ли вы гарантию на кастомные СЖО?</span>
+                <span class="icon-source">expand_more</span>
+              </button>
+              <div class="faq-item__answer">
+                Да, мы предоставляем полную 3-летнюю гарантию на все системы жидкостного охлаждения, включая кастомные контуры.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="side-nav" id="side-nav">
+    <div class="side-nav__header">
+      <div class="side-nav__header-row">
+        <div class="side-nav__header-icon">
+          <span class="icon-source">settings_input_component</span>
+        </div>
+        <div class="side-nav__header-info">
+          <h4 class="side-nav__header-title">Категории</h4>
+          <p class="side-nav__header-sub">Конфигуратор</p>
+        </div>
+      </div>
+    </div>
+    <div class="side-nav__links">
+      <a href="#" class="side-nav__link">
+        <span class="icon-source">memory</span>
+        <span class="side-nav__label">Процессор</span>
+      </a>
+      <a href="#" class="side-nav__link">
+        <span class="icon-source">monitor</span>
+        <span class="side-nav__label">Монитор</span>
+      </a>
+      <a href="#" class="side-nav__link">
+        <span class="icon-source">keyboard</span>
+        <span class="side-nav__label">Клавиатура</span>
+      </a>
+      <a href="#" class="side-nav__link">
+        <span class="icon-source">chair</span>
+        <span class="side-nav__label">Кресло</span>
+      </a>
+    </div>
+  </aside>
+
+  <footer class="footer" id="footer">
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <div>
+          <h2 class="footer__brand-name">MONOSPACE</h2>
+          <p class="footer__brand-desc">
+            Мы создаем не просто компьютеры, а инструменты для достижения ваших самых амбициозных целей. Каждый компонент отобран вручную, каждая сборка уникальна.
+          </p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Поделиться">
+              <span class="icon-source">share</span>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Email">
+              <span class="icon-source">alternate_email</span>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="RSS">
+              <span class="icon-source">rss_feed</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Магазин</h4>
+          <a href="#" class="footer__col-link">Игровые ПК</a>
+          <a href="#" class="footer__col-link">Станции</a>
+          <a href="#" class="footer__col-link">Аксессуары</a>
+          <a href="#" class="footer__col-link">Периферия</a>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Поддержка</h4>
+          <a href="#" class="footer__col-link">Гарантия</a>
+          <a href="#" class="footer__col-link">Доставка</a>
+          <a href="#" class="footer__col-link">Сервис</a>
+          <a href="#" class="footer__col-link">База знаний</a>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Рассылка</h4>
+          <p class="footer__newsletter-desc">Получайте обновления о новых технологиях и эксклюзивных сборках.</p>
+          <form class="footer__newsletter-form" id="newsletter-form">
+            <input class="footer__newsletter-input" type="email" placeholder="Email address" required />
+            <button class="footer__newsletter-btn" type="submit">Ok</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 MONOSPACE PRECISION SYSTEMS. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">Privacy</a>
+          <a href="#" class="footer__legal-link">Terms</a>
+          <a href="#" class="footer__legal-link">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav" id="bottom-nav">
+    <div class="bottom-nav__inner">
+      <div class="bottom-nav__item">
+        <span class="icon-source">settings_suggest</span>
+        <span class="bottom-nav__item-label">Конфиг</span>
+      </div>
+      <div class="bottom-nav__item">
+        <span class="icon-source">shopping_cart</span>
+        <span class="bottom-nav__item-label">Корзина</span>
+      </div>
+      <div class="bottom-nav__item bottom-nav__item--active">
+        <span class="icon-source">bolt</span>
+        <span class="bottom-nav__item-label">Пуск</span>
+      </div>
+    </div>
+  </nav>
+
+  <script src="src/js/main.js"></script>
+</body>
+</html>
