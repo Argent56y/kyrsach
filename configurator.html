@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MONOSPACE — React-конфигуратор рабочего места программиста." />
+  <title>MONOSPACE | Конфигуратор</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="configurator-page">
+  <nav class="top-nav" id="top-nav">
+    <a class="top-nav__logo" href="index.html">MONOSPACE</a>
+    <div class="top-nav__links">
+      <a href="index.html" class="top-nav__link">Главная</a>
+      <a href="index.html#catalog" class="top-nav__link">Каталог</a>
+      <a href="configurator.html" class="top-nav__link top-nav__link--active">Моя сборка</a>
+      <a href="index.html#why" class="top-nav__link">О нас</a>
+    </div>
+    <button class="top-nav__cta" type="button">Собрать ПК</button>
+  </nav>
+
+  <main class="configurator-shell">
+    <section class="configurator-shell__intro" aria-labelledby="configurator-title">
+      <p class="configurator-shell__eyebrow">Precision configurator</p>
+      <h1 class="configurator-shell__title" id="configurator-title">Конфигуратор рабочего места</h1>
+      <p class="configurator-shell__text">
+        Эта страница подготовлена как отдельная точка входа для React-ядра. В следующей части здесь появится приложение с категориями, товарами, сборкой и проверкой совместимости.
+      </p>
+    </section>
+
+    <section class="configurator-stage" aria-label="Область React-конфигуратора">
+      <div class="configurator-stage__rail" aria-hidden="true">
+        <span class="configurator-stage__dot configurator-stage__dot--active"></span>
+        <span class="configurator-stage__dot"></span>
+        <span class="configurator-stage__dot"></span>
+      </div>
+
+      <div id="configurator-root" class="configurator-root">
+        <div class="configurator-placeholder">
+          <div class="configurator-placeholder__icon">
+            <span class="icon-source">settings_input_component</span>
+          </div>
+          <div>
+            <p class="configurator-placeholder__label">React mount point</p>
+            <h2 class="configurator-placeholder__title">#configurator-root готов</h2>
+            <p class="configurator-placeholder__text">
+              Сейчас показан HTML fallback. После настройки Vite React-приложение будет монтироваться в этот контейнер.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="src/js/main.js"></script>
+</body>
+</html>
