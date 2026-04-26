@@ -17,6 +17,8 @@ npm run check
 
 В `.github/workflows/super-linter.yml` настроен Super-Linter `v8.3.0`. Workflow запускается при `push`, `pull_request` и вручную через `workflow_dispatch`.
 
+В CI проверяются JavaScript, JSON, XML и YAML. HTML/CSS/Markdown проверяются отдельно: HTML через W3C Markup Validation Service, CSS визуально и через production-сборку Vite, Markdown через просмотр документации на GitHub.
+
 После публикации проекта на GitHub во вкладке Actions должен появиться workflow `Super-Linter`.
 
 В `.github/workflows/pages.yml` настроен деплой на GitHub Pages. Workflow запускается при push в `main` и вручную. Он выполняет `npm ci`, `npm run check`, загружает папку `dist` как Pages artifact и публикует сайт.
