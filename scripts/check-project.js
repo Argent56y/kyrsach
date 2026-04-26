@@ -9,6 +9,7 @@ const requiredFiles = [
   'src/react/main.jsx',
   'src/react/App.jsx',
   'README.md',
+  'docs/project-explanation.md',
   'docs/testing.md',
   'eslint.config.js',
   '.github/workflows/super-linter.yml'
@@ -39,6 +40,7 @@ const textFiles = [
   'src/js/main.js',
   'src/react/App.jsx',
   'README.md',
+  'docs/project-explanation.md',
   'docs/project-parts.md',
   'docs/testing.md'
 ];

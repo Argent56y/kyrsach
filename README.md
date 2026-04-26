@@ -10,6 +10,13 @@
 - сохранение выбранной сборки в `localStorage`;
 - независимость `index.html` от React-сборки.
 
+## Документация
+
+- `docs/project-explanation.md` — пояснение к проекту для размещения на GitHub;
+- `docs/hybrid-architecture.md` — описание гибридной архитектуры;
+- `docs/testing.md` — локальная проверка и GitHub Actions;
+- `docs/project-parts.md` — история выполнения частей.
+
 ## Проверка
 
 ```bash
@@ -20,4 +27,4 @@ npm run dev
 
 После запуска dev-сервера главная страница доступна по `/`, конфигуратор — по `/configurator.html`.
 
-Дополнительные сведения о проверке проекта и GitHub Actions находятся в `docs/testing.md`.
+Дополнительные сведения о проекте находятся в `docs/project-explanation.md`, а проверка и GitHub Actions описаны в `docs/testing.md`.
