@@ -19,6 +19,8 @@ npm run check
 
 После публикации проекта на GitHub во вкладке Actions должен появиться workflow `Super-Linter`.
 
+В `.github/workflows/pages.yml` настроен деплой на GitHub Pages. Workflow запускается при push в `main` и вручную. Он выполняет `npm ci`, `npm run check`, загружает папку `dist` как Pages artifact и публикует сайт.
+
 ## Ручная HTML-проверка
 
 Для требования W3C Markup Validation Service можно проверить страницы вручную:

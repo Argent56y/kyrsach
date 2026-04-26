@@ -12,6 +12,7 @@ const requiredFiles = [
   'docs/project-explanation.md',
   'docs/testing.md',
   'eslint.config.js',
+  '.github/workflows/pages.yml',
   '.github/workflows/super-linter.yml'
 ];
 
@@ -64,6 +65,12 @@ if (indexHtml.includes('/src/react/main.jsx')) {
 
 if (!configuratorHtml.includes('/src/react/main.jsx')) {
   fail('configurator.html must mount the React configurator');
+}
+
+const viteConfig = readFileSync('vite.config.js', 'utf8');
+
+if (!viteConfig.includes("base: './'")) {
+  fail('vite.config.js must use relative asset paths for GitHub Pages');
 }
 
 const categoryCount = (xml.match(/<category\b/g) || []).length;

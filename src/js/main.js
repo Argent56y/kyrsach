@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initNewsletterForm();
 });
 
+const xmlUrl = new URL('../data/configurator.xml', import.meta.url).href;
+
 const iconPaths = {
   arrow_forward: '<path d="M5 12h14M13 6l6 6-6 6"/>',
   keyboard_double_arrow_down: '<path d="m7 6 5 5 5-5"/><path d="m7 13 5 5 5-5"/>',
@@ -55,7 +57,7 @@ function loadCategoriesFromXML() {
   const track = document.getElementById('slider-track');
   if (!track) return;
 
-  fetch('src/data/configurator.xml')
+  fetch(xmlUrl)
     .then(response => {
       if (!response.ok) throw new Error('Не удалось загрузить XML');
       return response.text();

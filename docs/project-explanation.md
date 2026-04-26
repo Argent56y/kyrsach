@@ -91,7 +91,7 @@ React-часть находится в `src/react/`.
 | JavaScript DOM | FAQ, каталог, форма и слайдер на главной странице |
 | Адаптивность | media queries в `css/main.css` |
 | Тестирование | `npm run check`, Vite build, GitHub Super-Linter |
-| GitHub-подготовка | `README.md`, `docs/testing.md`, `.github/workflows/super-linter.yml` |
+| GitHub-подготовка | `README.md`, `docs/testing.md`, `.github/workflows/super-linter.yml`, `.github/workflows/pages.yml` |
 
 ## Проверка
 
@@ -105,4 +105,4 @@ npm run check
 
 ## Публикация на GitHub
 
-Для публикации нужно загрузить репозиторий на GitHub. После push во вкладке Actions должен запуститься workflow `Super-Linter`. Подробная инструкция по проверке находится в `docs/testing.md`.
+Для публикации нужно загрузить репозиторий на GitHub и включить GitHub Pages с источником GitHub Actions. После push во вкладке Actions должны запуститься workflow `Super-Linter` и `GitHub Pages`. Подробная инструкция по проверке находится в `docs/testing.md`.

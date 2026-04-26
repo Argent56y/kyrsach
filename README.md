@@ -17,6 +17,16 @@
 - `docs/testing.md` — локальная проверка и GitHub Actions;
 - `docs/project-parts.md` — история выполнения частей.
 
+## Публикация
+
+Проект подготовлен к GitHub Pages. После push в ветку `main` workflow `GitHub Pages` собирает проект и публикует папку `dist`.
+
+Ожидаемый адрес после включения Pages в репозитории:
+
+```text
+https://argent56y.github.io/kyrsach/
+```
+
 ## Проверка
 
 ```bash
