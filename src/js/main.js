@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loadCategoriesFromXML();
   initFAQAccordion();
   initSliderNavigation();
+  initNewsletterForm();
 });
 
 const iconPaths = {
@@ -20,9 +21,12 @@ const iconPaths = {
   hub: '<circle cx="12" cy="12" r="2"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="m7 7 3.5 3.5M17 7l-3.5 3.5M7 17l3.5-3.5M17 17l-3.5-3.5"/>',
   monitor: '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>',
   keyboard: '<rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h.01M10 10h.01M13 10h.01M16 10h.01M7 14h10"/>',
+  storage: '<ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/>',
   table_restaurant: '<path d="M4 10h16"/><path d="M6 10l-2 9M18 10l2 9"/><path d="M8 5h8l2 5H6l2-5Z"/>',
   headset: '<path d="M4 13a8 8 0 0 1 16 0"/><path d="M4 13v4a2 2 0 0 0 2 2h2v-7H6a2 2 0 0 0-2 1Z"/><path d="M20 13v4a2 2 0 0 1-2 2h-2v-7h2a2 2 0 0 1 2 1Z"/>',
   chair: '<path d="M7 11V6a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v5"/><path d="M5 11h14v5H5z"/><path d="M8 16v5M16 16v5M7 21h10"/>',
+  mouse: '<rect x="7" y="3" width="10" height="18" rx="5"/><path d="M12 7v4"/><path d="M12 3v4"/>',
+  lightbulb: '<path d="M9 18h6"/><path d="M10 22h4"/><path d="M8.5 14.5a6 6 0 1 1 7 0c-.9.8-1.5 1.8-1.5 3.5h-4c0-1.7-.6-2.7-1.5-3.5Z"/>',
   settings_input_component: '<rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/>',
   settings_suggest: '<path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2 2-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21h-3v-.1a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1-2-2 .1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H4v-3h.1a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1 2-2 .1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.5V4h3v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1 2 2-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.5 1h.1v3h-.1a1.7 1.7 0 0 0-1.5 1Z"/>',
   shopping_cart: '<circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L20 8H7"/>',
@@ -78,8 +82,10 @@ function loadCategoriesFromXML() {
 }
 
 function createProductCard(name, icon, priceFrom, imageSrc) {
-  const card = document.createElement('div');
+  const card = document.createElement('a');
   card.className = 'product-card';
+  card.href = 'configurator.html';
+  card.setAttribute('aria-label', `Открыть конфигуратор: ${name}`);
 
   card.innerHTML = `
     <div class="product-card__image">
@@ -152,5 +158,15 @@ function initSliderNavigation() {
 
   nextBtn.addEventListener('click', () => {
     track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+}
+
+function initNewsletterForm() {
+  const form = document.getElementById('newsletter-form');
+  if (!form) return;
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    form.reset();
   });
 }

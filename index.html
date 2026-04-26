@@ -10,14 +10,14 @@
 <body>
 
   <nav class="top-nav" id="top-nav">
-    <div class="top-nav__logo">MONOSPACE</div>
+    <a class="top-nav__logo" href="index.html">MONOSPACE</a>
     <div class="top-nav__links">
-      <a href="#" class="top-nav__link top-nav__link--active">Главная</a>
+      <a href="index.html" class="top-nav__link top-nav__link--active">Главная</a>
       <a href="#catalog" class="top-nav__link">Каталог</a>
-      <a href="#catalog" class="top-nav__link">Моя сборка</a>
+      <a href="configurator.html" class="top-nav__link">Моя сборка</a>
       <a href="#why" class="top-nav__link">О нас</a>
     </div>
-    <button class="top-nav__cta" id="cta-build">Собрать ПК</button>
+    <a class="top-nav__cta" id="cta-build" href="configurator.html">Собрать ПК</a>
   </nav>
 
   <main>
@@ -30,7 +30,7 @@
       <div class="hero__content">
         <div class="hero__badge">
           <span class="hero__badge-dot"></span>
-          <span class="hero__badge-text">Now Live: Precision Configurator v4.2</span>
+          <span class="hero__badge-text">XML-каталог и React-конфигуратор</span>
         </div>
         <h1 class="hero__title">
           Соберите свое идеальное<br />
@@ -40,11 +40,11 @@
           Профессиональные решения для разработчиков, дизайнеров и геймеров. Бескомпромиссная мощность, начиная от $1,299.
         </p>
         <div class="hero__actions">
-          <button class="btn btn--amber" id="btn-start-build">
+          <a class="btn btn--amber" id="btn-start-build" href="configurator.html">
             Начать сборку
             <span class="icon-source">arrow_forward</span>
-          </button>
-          <button class="btn btn--ghost" id="btn-catalog">Смотреть каталог</button>
+          </a>
+          <a class="btn btn--ghost" id="btn-catalog" href="#catalog">Смотреть каталог</a>
         </div>
       </div>
       <div class="hero__scroll-indicator">
@@ -56,7 +56,7 @@
       <div class="features">
         <article class="feature-main">
           <div style="position: relative; z-index: 10;">
-            <span class="feature-main__label">Engineered for Performance</span>
+            <span class="feature-main__label">Расчет под рабочую нагрузку</span>
             <h2 class="feature-main__title">Точность в каждой детали</h2>
             <p class="feature-main__desc">
               Наш конфигуратор учитывает тепловыделение, совместимость размеров и пиковые нагрузки для достижения максимальной стабильности системы.
@@ -65,11 +65,11 @@
           <div class="feature-main__tags">
             <div class="tag">
               <span class="icon-source">speed</span>
-              <span>Turbo Boost ready</span>
+              <span>Готово к нагрузкам</span>
             </div>
             <div class="tag">
               <span class="icon-source">thermostat</span>
-              <span>Thermal Optimized</span>
+              <span>Тепловой запас</span>
             </div>
           </div>
           <img class="feature-main__image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf64W-9gwWUaYM3EGi1idXRgnKjImxg7UmFMMgPa2B-uYFQWtmuX7dZzAZ0MeA2J_oGdUtpxzG6eaZMtAxX9C3kZ1Ktt4fJn4ZBHae0CWxYtNpJOtdDVk7L98Bu2_2NHZYws9loLyOPmy1SqOVj87Yk_INqzxatiyarjKjLeNN8rAb3NeID-iwVGRajCc4nr-sM-24CSqZNfUZiUq4O2CmQRbI289EGQZjScJdHRVJT2XWkU7sVK0BydVWZRdhRDAI7zM4dz0nyQ" alt="Детали сборки ПК" />
@@ -97,7 +97,7 @@
       <div class="section__inner">
         <header class="section__header">
           <h2 class="section__title">Почему Monospace?</h2>
-          <p class="section__subtitle">The standard of precision</p>
+          <p class="section__subtitle">Точный подбор компонентов</p>
         </header>
         <div class="why-grid">
           <div class="why-item">
@@ -130,7 +130,7 @@
         <div class="slider__header">
           <div>
             <h2 class="slider__title">Начните с главного</h2>
-            <p class="slider__subtitle">Select your entry point</p>
+            <p class="slider__subtitle">Категории из XML-каталога</p>
           </div>
           <div class="slider__arrows">
             <button class="slider__arrow" id="slider-prev" aria-label="Предыдущий слайд">
@@ -155,7 +155,7 @@
           <div class="benchmarks__bars">
             <div class="bar">
               <div class="bar__header">
-                <span>Multi-core Rendering</span>
+                <span>Многопоточный рендеринг</span>
                 <span class="bar__value">98%</span>
               </div>
               <div class="bar__track">
@@ -164,7 +164,7 @@
             </div>
             <div class="bar">
               <div class="bar__header">
-                <span>Thermal Efficiency</span>
+                <span>Тепловая эффективность</span>
                 <span class="bar__value">94%</span>
               </div>
               <div class="bar__track">
@@ -173,7 +173,7 @@
             </div>
             <div class="bar">
               <div class="bar__header">
-                <span>Memory Bandwidth</span>
+                <span>Пропускная способность памяти</span>
                 <span class="bar__value">89%</span>
               </div>
               <div class="bar__track">
@@ -182,7 +182,7 @@
             </div>
           </div>
           <div class="benchmarks__score">
-            <p class="benchmarks__score-label">Global Cinebench Peak</p>
+            <p class="benchmarks__score-label">Пиковый результат Cinebench</p>
             <p class="benchmarks__score-value">14,842 <span class="benchmarks__score-unit">pts</span></p>
           </div>
         </div>
@@ -200,9 +200,9 @@
         <div class="community__header">
           <div>
             <h2 class="community__title">Сборки сообщества</h2>
-            <p class="community__subtitle">Inspired by creators</p>
+            <p class="community__subtitle">Примеры рабочих мест</p>
           </div>
-          <a href="#" class="community__view-all">Смотреть все →</a>
+          <a href="configurator.html" class="community__view-all">Собрать свое →</a>
         </div>
         <div class="community__grid">
           <div class="community-card">
@@ -322,19 +322,19 @@
       </div>
     </div>
     <div class="side-nav__links">
-      <a href="#" class="side-nav__link">
+      <a href="configurator.html" class="side-nav__link">
         <span class="icon-source">memory</span>
         <span class="side-nav__label">Процессор</span>
       </a>
-      <a href="#" class="side-nav__link">
+      <a href="configurator.html" class="side-nav__link">
         <span class="icon-source">monitor</span>
         <span class="side-nav__label">Монитор</span>
       </a>
-      <a href="#" class="side-nav__link">
+      <a href="configurator.html" class="side-nav__link">
         <span class="icon-source">keyboard</span>
         <span class="side-nav__label">Клавиатура</span>
       </a>
-      <a href="#" class="side-nav__link">
+      <a href="configurator.html" class="side-nav__link">
         <span class="icon-source">chair</span>
         <span class="side-nav__label">Кресло</span>
       </a>
@@ -350,46 +350,46 @@
             Мы создаем не просто компьютеры, а инструменты для достижения ваших самых амбициозных целей. Каждый компонент отобран вручную, каждая сборка уникальна.
           </p>
           <div class="footer__social">
-            <a href="#" class="footer__social-link" aria-label="Поделиться">
+            <a href="configurator.html" class="footer__social-link" aria-label="Поделиться сборкой">
               <span class="icon-source">share</span>
             </a>
-            <a href="#" class="footer__social-link" aria-label="Email">
+            <a href="mailto:hello@monospace.example" class="footer__social-link" aria-label="Email">
               <span class="icon-source">alternate_email</span>
             </a>
-            <a href="#" class="footer__social-link" aria-label="RSS">
+            <a href="#catalog" class="footer__social-link" aria-label="Каталог">
               <span class="icon-source">rss_feed</span>
             </a>
           </div>
         </div>
         <div>
           <h4 class="footer__col-title">Магазин</h4>
-          <a href="#" class="footer__col-link">Игровые ПК</a>
-          <a href="#" class="footer__col-link">Станции</a>
-          <a href="#" class="footer__col-link">Аксессуары</a>
-          <a href="#" class="footer__col-link">Периферия</a>
+          <a href="configurator.html" class="footer__col-link">Игровые ПК</a>
+          <a href="configurator.html" class="footer__col-link">Станции</a>
+          <a href="#catalog" class="footer__col-link">Аксессуары</a>
+          <a href="#catalog" class="footer__col-link">Периферия</a>
         </div>
         <div>
           <h4 class="footer__col-title">Поддержка</h4>
-          <a href="#" class="footer__col-link">Гарантия</a>
-          <a href="#" class="footer__col-link">Доставка</a>
-          <a href="#" class="footer__col-link">Сервис</a>
-          <a href="#" class="footer__col-link">База знаний</a>
+          <a href="#faq" class="footer__col-link">Гарантия</a>
+          <a href="#faq" class="footer__col-link">Доставка</a>
+          <a href="#why" class="footer__col-link">Сервис</a>
+          <a href="#performance" class="footer__col-link">База знаний</a>
         </div>
         <div>
           <h4 class="footer__col-title">Рассылка</h4>
           <p class="footer__newsletter-desc">Получайте обновления о новых технологиях и эксклюзивных сборках.</p>
           <form class="footer__newsletter-form" id="newsletter-form">
-            <input class="footer__newsletter-input" type="email" placeholder="Email address" required />
-            <button class="footer__newsletter-btn" type="submit">Ok</button>
+            <input class="footer__newsletter-input" type="email" placeholder="Email" aria-label="Email для рассылки" required />
+            <button class="footer__newsletter-btn" type="submit">OK</button>
           </form>
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copyright">© 2026 MONOSPACE PRECISION SYSTEMS. All rights reserved.</p>
+        <p class="footer__copyright">© 2026 MONOSPACE PRECISION SYSTEMS. Все права защищены.</p>
         <div class="footer__legal">
-          <a href="#" class="footer__legal-link">Privacy</a>
-          <a href="#" class="footer__legal-link">Terms</a>
-          <a href="#" class="footer__legal-link">Cookies</a>
+          <a href="#faq" class="footer__legal-link">Конфиденциальность</a>
+          <a href="#faq" class="footer__legal-link">Условия</a>
+          <a href="#faq" class="footer__legal-link">Cookies</a>
         </div>
       </div>
     </div>
@@ -397,18 +397,18 @@
 
   <nav class="bottom-nav" id="bottom-nav">
     <div class="bottom-nav__inner">
-      <div class="bottom-nav__item">
+      <a class="bottom-nav__item" href="configurator.html">
         <span class="icon-source">settings_suggest</span>
         <span class="bottom-nav__item-label">Конфиг</span>
-      </div>
-      <div class="bottom-nav__item">
+      </a>
+      <a class="bottom-nav__item" href="configurator.html">
         <span class="icon-source">shopping_cart</span>
         <span class="bottom-nav__item-label">Корзина</span>
-      </div>
-      <div class="bottom-nav__item bottom-nav__item--active">
+      </a>
+      <a class="bottom-nav__item bottom-nav__item--active" href="configurator.html">
         <span class="icon-source">bolt</span>
         <span class="bottom-nav__item-label">Пуск</span>
-      </div>
+      </a>
     </div>
   </nav>
 

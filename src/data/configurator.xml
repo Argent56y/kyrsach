@@ -1,75 +1,433 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurator>
+<configurator version="1.0">
+  <meta>
+    <title>MONOSPACE Workplace Configurator</title>
+    <currency>USD</currency>
+    <updated>2026-04-24</updated>
+  </meta>
+
   <categories>
-    <category id="monitors">
+    <category id="processors" required="true" order="1">
+      <name>Процессоры</name>
+      <icon>memory</icon>
+      <price_from>289</price_from>
+      <image>https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image>
+      <description>CPU для сборок под разработку, 3D, игры и вычисления.</description>
+      <products>
+        <product id="cpu-ryzen-7700x" tier="balanced">
+          <name>AMD Ryzen 7 7700X</name>
+          <brand>AMD</brand>
+          <specs>8 ядер, 16 потоков, до 5.4 ГГц, AM5</specs>
+          <price>289</price>
+          <power_watts>105</power_watts>
+          <socket>AM5</socket>
+          <score>82</score>
+        </product>
+        <product id="cpu-ryzen-7950x" tier="creator">
+          <name>AMD Ryzen 9 7950X</name>
+          <brand>AMD</brand>
+          <specs>16 ядер, 32 потока, до 5.7 ГГц, AM5</specs>
+          <price>549</price>
+          <power_watts>170</power_watts>
+          <socket>AM5</socket>
+          <score>96</score>
+        </product>
+        <product id="cpu-i7-14700k" tier="gaming">
+          <name>Intel Core i7-14700K</name>
+          <brand>Intel</brand>
+          <specs>20 ядер, 28 потоков, до 5.6 ГГц, LGA1700</specs>
+          <price>399</price>
+          <power_watts>125</power_watts>
+          <socket>LGA1700</socket>
+          <score>91</score>
+        </product>
+      </products>
+    </category>
+
+    <category id="motherboards" required="true" order="2">
+      <name>Материнские платы</name>
+      <icon>hub</icon>
+      <price_from>219</price_from>
+      <image>https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image>
+      <description>Платы с подходящим сокетом, быстрыми интерфейсами и запасом под апгрейд.</description>
+      <products>
+        <product id="mb-x670e-hero" tier="creator">
+          <name>ASUS ROG Crosshair X670E Hero</name>
+          <brand>ASUS</brand>
+          <specs>AM5, X670E, DDR5, PCIe 5.0, Wi-Fi 6E</specs>
+          <price>629</price>
+          <socket>AM5</socket>
+          <score>95</score>
+        </product>
+        <product id="mb-b650-tomahawk" tier="balanced">
+          <name>MSI MAG B650 Tomahawk WiFi</name>
+          <brand>MSI</brand>
+          <specs>AM5, B650, DDR5, Wi-Fi 6E</specs>
+          <price>219</price>
+          <socket>AM5</socket>
+          <score>86</score>
+        </product>
+        <product id="mb-z790-aorus" tier="gaming">
+          <name>Gigabyte Z790 AORUS Elite AX</name>
+          <brand>Gigabyte</brand>
+          <specs>LGA1700, Z790, DDR5, PCIe 5.0, Wi-Fi 6E</specs>
+          <price>269</price>
+          <socket>LGA1700</socket>
+          <score>88</score>
+        </product>
+      </products>
+    </category>
+
+    <category id="graphics" required="true" order="3">
+      <name>Видеокарты</name>
+      <icon>bolt</icon>
+      <price_from>549</price_from>
+      <image>https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image>
+      <description>GPU для CUDA, рендера, игр и многомониторных рабочих мест.</description>
+      <products>
+        <product id="gpu-rtx-4070-super" tier="balanced">
+          <name>NVIDIA GeForce RTX 4070 SUPER</name>
+          <brand>NVIDIA</brand>
+          <specs>12 ГБ GDDR6X, DLSS 3, 220 Вт</specs>
+          <price>599</price>
+          <power_watts>220</power_watts>
+          <vram_gb>12</vram_gb>
+          <score>84</score>
+        </product>
+        <product id="gpu-rtx-4080-super" tier="creator">
+          <name>NVIDIA GeForce RTX 4080 SUPER</name>
+          <brand>NVIDIA</brand>
+          <specs>16 ГБ GDDR6X, 4K, CUDA, 320 Вт</specs>
+          <price>999</price>
+          <power_watts>320</power_watts>
+          <vram_gb>16</vram_gb>
+          <score>94</score>
+        </product>
+        <product id="gpu-rx-7900-xtx" tier="workstation">
+          <name>AMD Radeon RX 7900 XTX</name>
+          <brand>AMD</brand>
+          <specs>24 ГБ GDDR6, DisplayPort 2.1, 355 Вт</specs>
+          <price>929</price>
+          <power_watts>355</power_watts>
+          <vram_gb>24</vram_gb>
+          <score>92</score>
+        </product>
+      </products>
+    </category>
+
+    <category id="power" required="true" order="4">
+      <name>Блоки питания</name>
+      <icon>bolt</icon>
+      <price_from>129</price_from>
+      <image>https://images.unsplash.com/photo-1600348712270-5af9e3590f66?auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image>
+      <description>PSU с запасом мощности для CPU, видеокарты и будущего апгрейда.</description>
+      <products>
+        <product id="psu-rm750e" tier="balanced">
+          <name>Corsair RM750e</name>
+          <brand>Corsair</brand>
+          <specs>750 Вт, 80+ Gold, ATX 3.0</specs>
+          <price>129</price>
+          <power_watts>750</power_watts>
+          <score>84</score>
+        </product>
+        <product id="psu-focus-850" tier="creator">
+          <name>Seasonic Focus GX-850</name>
+          <brand>Seasonic</brand>
+          <specs>850 Вт, 80+ Gold, fully modular</specs>
+          <price>169</price>
+          <power_watts>850</power_watts>
+          <score>90</score>
+        </product>
+        <product id="psu-hx1000i" tier="workstation">
+          <name>Corsair HX1000i</name>
+          <brand>Corsair</brand>
+          <specs>1000 Вт, 80+ Platinum, ATX 3.0</specs>
+          <price>259</price>
+          <power_watts>1000</power_watts>
+          <score>95</score>
+        </product>
+      </products>
+    </category>
+
+    <category id="memory" required="true" order="5">
+      <name>Оперативная память</name>
+      <icon>memory</icon>
+      <price_from>129</price_from>
+      <image>https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image>
+      <description>DDR5-комплекты для IDE, виртуальных машин, 3D-сцен и ML-пайплайнов.</description>
+      <products>
+        <product id="ram-32-ddr5" tier="balanced">
+          <name>Kingston Fury Beast 32 ГБ</name>
+          <brand>Kingston</brand>
+          <specs>2x16 ГБ, DDR5-6000, CL36</specs>
+          <price>129</price>
+          <capacity_gb>32</capacity_gb>
+          <memory_type>DDR5</memory_type>
+          <score>78</score>
+        </product>
+        <product id="ram-64-ddr5" tier="creator">
+          <name>G.Skill Trident Z5 Neo 64 ГБ</name>
+          <brand>G.Skill</brand>
+          <specs>2x32 ГБ, DDR5-6000, CL30</specs>
+          <price>249</price>
+          <capacity_gb>64</capacity_gb>
+          <memory_type>DDR5</memory_type>
+          <score>90</score>
+        </product>
+        <product id="ram-96-ddr5" tier="workstation">
+          <name>Corsair Vengeance 96 ГБ</name>
+          <brand>Corsair</brand>
+          <specs>2x48 ГБ, DDR5-5600, CL40</specs>
+          <price>379</price>
+          <capacity_gb>96</capacity_gb>
+          <memory_type>DDR5</memory_type>
+          <score>95</score>
+        </product>
+      </products>
+    </category>
+
+    <category id="storage" required="true" order="6">
+      <name>Накопители</name>
+      <icon>storage</icon>
+      <price_from>109</price_from>
+      <image>https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image>
+      <description>NVMe SSD для проектов, кешей сборки, медиатеки и рабочих архивов.</description>
+      <products>
+        <product id="ssd-1tb-990-pro" tier="balanced">
+          <name>Samsung 990 PRO 1 ТБ</name>
+          <brand>Samsung</brand>
+          <specs>PCIe 4.0 NVMe, до 7450 МБ/с</specs>
+          <price>109</price>
+          <capacity_gb>1000</capacity_gb>
+          <score>86</score>
+        </product>
+        <product id="ssd-2tb-sn850x" tier="creator">
+          <name>WD Black SN850X 2 ТБ</name>
+          <brand>Western Digital</brand>
+          <specs>PCIe 4.0 NVMe, до 7300 МБ/с</specs>
+          <price>159</price>
+          <capacity_gb>2000</capacity_gb>
+          <score>89</score>
+        </product>
+        <product id="ssd-4tb-t700" tier="workstation">
+          <name>Crucial T700 4 ТБ</name>
+          <brand>Crucial</brand>
+          <specs>PCIe 5.0 NVMe, до 12400 МБ/с</specs>
+          <price>469</price>
+          <capacity_gb>4000</capacity_gb>
+          <score>96</score>
+        </product>
+      </products>
+    </category>
+
+    <category id="monitors" required="true" order="7">
       <name>Мониторы</name>
       <icon>monitor</icon>
       <price_from>499</price_from>
       <image>https://lh3.googleusercontent.com/aida-public/AB6AXuAAU1plefJY7ZxwM-6Q-4mzHqWZ2o2G-_fO3F2QIT9ooKrp1E8K5_LrIH21rqOsuMvfyjnnimiKdWJV8I-6VtCMVtkH8GGzH_2B_z3-GQRb1Rz8QePGBaZQrQ98BpoqONNQjSL81UFHaUm6w0c6HQ7-T8XXm5ZM6LixZTr7bAbvBeprCtaGLE1A3uIUldFpWP4O-dI9l3-6cHVA49jX-AJDmDtYtRE-kaZxySyIR_TaLkKtvNoredxz3V0LDk6vpJPr0FPeM9cGYQ</image>
+      <description>Панели для кода, дизайна, 3D, игр и цветокоррекции.</description>
       <products>
-        <product id="mon-1">
+        <product id="mon-pa32ucg" tier="creator">
           <name>ASUS ProArt PA32UCG-K</name>
-          <specs>32" 4K HDR, 120Hz, Mini LED</specs>
+          <brand>ASUS</brand>
+          <specs>32&quot; 4K HDR, 120 Гц, Mini LED</specs>
           <price>3499</price>
+          <diagonal_inches>32</diagonal_inches>
+          <refresh_rate_hz>120</refresh_rate_hz>
+          <score>98</score>
         </product>
-        <product id="mon-2">
+        <product id="mon-u3223qe" tier="balanced">
           <name>Dell UltraSharp U3223QE</name>
-          <specs>32" 4K IPS, USB-C Hub</specs>
+          <brand>Dell</brand>
+          <specs>32&quot; 4K IPS, USB-C Hub</specs>
           <price>899</price>
+          <diagonal_inches>32</diagonal_inches>
+          <refresh_rate_hz>60</refresh_rate_hz>
+          <score>86</score>
         </product>
-        <product id="mon-3">
+        <product id="mon-27gp950" tier="gaming">
           <name>LG 27GP950-B</name>
-          <specs>27" 4K Nano IPS, 160Hz, HDMI 2.1</specs>
+          <brand>LG</brand>
+          <specs>27&quot; 4K Nano IPS, 160 Гц, HDMI 2.1</specs>
           <price>799</price>
+          <diagonal_inches>27</diagonal_inches>
+          <refresh_rate_hz>160</refresh_rate_hz>
+          <score>88</score>
         </product>
       </products>
     </category>
-    <category id="keyboards">
+
+    <category id="keyboards" required="false" order="8">
       <name>Клавиатуры</name>
       <icon>keyboard</icon>
       <price_from>149</price_from>
       <image>https://lh3.googleusercontent.com/aida-public/AB6AXuBVulgQHeCjUvOs-Zx1wPkteq66WjlYpD7V2eCUjNQgHNuaXB8G2qCej4IPgsRcFNr3ApMn-sXJXcFqrUQtIYCkAhruCA2Csok7K872hHlDt-AUGRSIuyDRvO9YMwSP0xSeEzAu49B3MOWJ3NWzdLp1IcxH1EkwGfyTC9YuJEyedxttnrJkW1vI5Pa6neB3tq92rg_tnLtQJNWP7ZLKnaLoXAnm-nPRAsaYribsJqTuIpqFGqe-GTZePonhJ7y8y7Cqg-07yUCzFg</image>
+      <description>Механические клавиатуры для длительной печати и быстрых команд.</description>
       <products>
-        <product id="kb-1">
+        <product id="kb-q1-pro" tier="balanced">
           <name>Keychron Q1 Pro</name>
-          <specs>75%, Gasket Mount, Hot-swap</specs>
+          <brand>Keychron</brand>
+          <specs>75%, Gasket Mount, Hot-swap, Bluetooth</specs>
           <price>219</price>
+          <connection>wireless</connection>
+          <score>87</score>
         </product>
-        <product id="kb-2">
+        <product id="kb-hhkb-hybrid" tier="minimal">
           <name>HHKB Professional HYBRID</name>
+          <brand>PFU</brand>
           <specs>60%, Topre 45g, Bluetooth</specs>
           <price>349</price>
+          <connection>wireless</connection>
+          <score>92</score>
+        </product>
+        <product id="kb-wqx" tier="gaming">
+          <name>Wooting 60HE+</name>
+          <brand>Wooting</brand>
+          <specs>60%, analog input, rapid trigger</specs>
+          <price>189</price>
+          <connection>wired</connection>
+          <score>89</score>
         </product>
       </products>
     </category>
-    <category id="desks">
+
+    <category id="mice" required="false" order="9">
+      <name>Мыши</name>
+      <icon>mouse</icon>
+      <price_from>99</price_from>
+      <image>https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image>
+      <description>Манипуляторы для точной работы, игр и эргономики.</description>
+      <products>
+        <product id="mouse-mx-master-3s" tier="work">
+          <name>Logitech MX Master 3S</name>
+          <brand>Logitech</brand>
+          <specs>8000 DPI, тихие клики, MagSpeed</specs>
+          <price>99</price>
+          <connection>wireless</connection>
+          <score>88</score>
+        </product>
+        <product id="mouse-viper-v3" tier="gaming">
+          <name>Razer Viper V3 Pro</name>
+          <brand>Razer</brand>
+          <specs>54 г, 35000 DPI, HyperPolling</specs>
+          <price>159</price>
+          <connection>wireless</connection>
+          <score>93</score>
+        </product>
+      </products>
+    </category>
+
+    <category id="chairs" required="false" order="10">
+      <name>Кресла</name>
+      <icon>chair</icon>
+      <price_from>399</price_from>
+      <image>https://images.unsplash.com/photo-1589384267710-7a25bc5a70ce?auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image>
+      <description>Эргономика для рабочих смен, созвонов и долгих сессий за проектом.</description>
+      <products>
+        <product id="chair-ergohuman-gen2" tier="balanced">
+          <name>Ergohuman Gen2 Elite</name>
+          <brand>Ergohuman</brand>
+          <specs>Сетка, 4D-подлокотники, поясничная поддержка</specs>
+          <price>799</price>
+          <score>88</score>
+        </product>
+        <product id="chair-aeron" tier="premium">
+          <name>Herman Miller Aeron Remastered</name>
+          <brand>Herman Miller</brand>
+          <specs>PostureFit SL, размер B, графит</specs>
+          <price>1599</price>
+          <score>96</score>
+        </product>
+      </products>
+    </category>
+
+    <category id="desks" required="false" order="11">
       <name>Столы</name>
       <icon>table_restaurant</icon>
       <price_from>899</price_from>
       <image>https://lh3.googleusercontent.com/aida-public/AB6AXuCGDA88-xZURPqPhUqNKnx7RQ-bi1SYIrToZmCd6JvcUu39pBibfzo33geUKCws1PZek3q5xmyXY5S9ZIdgv0ZnaXWkpKZst4p9_9WD5MMsup3lb-H7DtowBWzHS5agGXu0eyup713sjk4WFUMDY0e9Lq_0fl_evGOiAKGCQsdkMA_jVo5wQwv9cElDKwJq9Qh6MHcqaI-cxShDL6C6lx28jmeFnif7p8nMQLVkLe95K-PmpMkWzOOCIGIsexODCu7SzKC-jXwEeQ</image>
+      <description>Рабочие поверхности с кабель-менеджментом и регулировкой высоты.</description>
       <products>
-        <product id="desk-1">
+        <product id="desk-uplift-v2" tier="premium">
           <name>Uplift V2 Standing Desk</name>
-          <specs>72"x30", Bamboo, Двухмоторный</specs>
+          <brand>Uplift</brand>
+          <specs>72&quot;x30&quot;, bamboo, двухмоторный привод</specs>
           <price>1199</price>
+          <width_cm>183</width_cm>
+          <score>91</score>
+        </product>
+        <product id="desk-flexispot-e7" tier="balanced">
+          <name>FlexiSpot E7 Pro</name>
+          <brand>FlexiSpot</brand>
+          <specs>160x80 см, электропривод, память высоты</specs>
+          <price>899</price>
+          <width_cm>160</width_cm>
+          <score>84</score>
         </product>
       </products>
     </category>
-    <category id="audio">
+
+    <category id="audio" required="false" order="12">
       <name>Аудио</name>
       <icon>headset</icon>
       <price_from>299</price_from>
       <image>https://lh3.googleusercontent.com/aida-public/AB6AXuB3DgHriV2AV9T7F30zDN27b3p7KTc8Nb-H7Y5zF8QqBUQJO5juzK_LtBJ9p4mD6bt0AwP-XAFBgSXdBsuug1tBg0JSBJN1QhJVUKkpLtK9Uq0P-B432wRatkUPn52DIe2qUFK068-WLi5hFp2FlTpp4kc7aJwln54bI8uCcH_9urB9FTx-7fAtcMbTGk6D466fYAAzdfacfLTrVIs6NDvLYN4jMzq2oWxiWPfSq9zEzv6_GYBRh8Szm25XztVolFFmfi4iQqRz0A</image>
+      <description>Наушники, гарнитуры и студийный звук для фокуса и созвонов.</description>
       <products>
-        <product id="audio-1">
+        <product id="audio-hd660s2" tier="studio">
           <name>Sennheiser HD 660S2</name>
-          <specs>Открытые, 300Ω, Hi-Res Audio</specs>
+          <brand>Sennheiser</brand>
+          <specs>Открытые, 300 Ом, Hi-Res Audio</specs>
           <price>499</price>
+          <connection>wired</connection>
+          <score>91</score>
         </product>
-        <product id="audio-2">
+        <product id="audio-lcd-x" tier="creator">
           <name>Audeze LCD-X</name>
-          <specs>Планарно-магнитные, 20Ω</specs>
+          <brand>Audeze</brand>
+          <specs>Планарно-магнитные, 20 Ом</specs>
           <price>1199</price>
+          <connection>wired</connection>
+          <score>97</score>
+        </product>
+        <product id="audio-momentum-4" tier="wireless">
+          <name>Sennheiser Momentum 4 Wireless</name>
+          <brand>Sennheiser</brand>
+          <specs>Bluetooth, ANC, до 60 часов</specs>
+          <price>299</price>
+          <connection>wireless</connection>
+          <score>86</score>
+        </product>
+      </products>
+    </category>
+
+    <category id="lighting" required="false" order="13">
+      <name>Освещение</name>
+      <icon>lightbulb</icon>
+      <price_from>79</price_from>
+      <image>https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image>
+      <description>Свет для вечерней работы, стриминга и аккуратного пространства.</description>
+      <products>
+        <product id="light-screenbar-halo" tier="work">
+          <name>BenQ ScreenBar Halo</name>
+          <brand>BenQ</brand>
+          <specs>Мониторная лампа, беспроводной контроллер</specs>
+          <price>179</price>
+          <score>88</score>
+        </product>
+        <product id="light-key-light-air" tier="creator">
+          <name>Elgato Key Light Air</name>
+          <brand>Elgato</brand>
+          <specs>1400 лм, Wi-Fi, регулировка температуры</specs>
+          <price>129</price>
+          <score>84</score>
+        </product>
+        <product id="light-lightstrip" tier="ambient">
+          <name>Philips Hue Lightstrip Plus</name>
+          <brand>Philips Hue</brand>
+          <specs>RGBW, 2 м, сценарии освещения</specs>
+          <price>79</price>
+          <score>80</score>
         </product>
       </products>
     </category>
