@@ -13,6 +13,7 @@
 ## Документация
 
 - `docs/project-explanation.md` — пояснение к проекту для размещения на GitHub;
+- `docs/prototype.md` — текстовая спецификация прототипа интерфейса;
 - `docs/hybrid-architecture.md` — описание гибридной архитектуры;
 - `docs/testing.md` — локальная проверка и GitHub Actions;
 - `docs/project-parts.md` — история выполнения частей.

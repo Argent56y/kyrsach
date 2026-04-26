@@ -21,7 +21,7 @@
 | `src/js/main.js` | DOM-логика главной страницы: SVG-иконки, XML-каталог, FAQ, слайдер, форма |
 | `src/data/configurator.xml` | XML-каталог категорий и товаров |
 | `src/react/` | React-ядро конфигуратора |
-| `docs/` | Пояснения, архитектура, тестирование и план частей |
+| `docs/` | Пояснения, прототип, архитектура, тестирование и план частей |
 
 ## Архитектура
 
@@ -85,6 +85,7 @@ React-часть находится в `src/react/`.
 | Требование | Реализация |
 | --- | --- |
 | HTML5 и XML | `index.html`, `configurator.html`, `src/data/configurator.xml` |
+| Прототип | `docs/prototype.md`, `stitch_setup_summary_page/anthracite_mono/DESIGN.md` |
 | CSS3 и SCSS | `css/main.css`, `src/scss/` |
 | Несколько веб-страниц | `index.html`, `configurator.html` |
 | SVG-графика | inline SVG-иконки создаются в `src/js/main.js` |

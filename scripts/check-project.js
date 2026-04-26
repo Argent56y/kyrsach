@@ -10,6 +10,7 @@ const requiredFiles = [
   'src/react/App.jsx',
   'README.md',
   'docs/project-explanation.md',
+  'docs/prototype.md',
   'docs/testing.md',
   'eslint.config.js',
   '.github/workflows/pages.yml',
@@ -42,6 +43,7 @@ const textFiles = [
   'src/react/App.jsx',
   'README.md',
   'docs/project-explanation.md',
+  'docs/prototype.md',
   'docs/project-parts.md',
   'docs/testing.md'
 ];
