@@ -64,7 +64,7 @@ export function parseConfiguratorXml(xmlString) {
   return {
     meta: {
       title: getText(document, 'meta > title'),
-      currency: getText(document, 'meta > currency', 'USD'),
+      currency: getText(document, 'meta > currency', 'BYN'),
       updated: getText(document, 'meta > updated')
     },
     categories

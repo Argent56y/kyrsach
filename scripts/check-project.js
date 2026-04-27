@@ -3,11 +3,14 @@ import { readFileSync, existsSync } from 'node:fs';
 const requiredFiles = [
   'index.html',
   'configurator.html',
+  'summary.html',
   'css/main.css',
   'src/js/main.js',
   'src/data/configurator.xml',
   'src/react/main.jsx',
+  'src/react/summaryEntry.jsx',
   'src/react/App.jsx',
+  'src/react/Summary.jsx',
   'README.md',
   'docs/project-explanation.md',
   'docs/prototype.md',
@@ -39,8 +42,10 @@ for (const file of requiredFiles) {
 const textFiles = [
   'index.html',
   'configurator.html',
+  'summary.html',
   'src/js/main.js',
   'src/react/App.jsx',
+  'src/react/Summary.jsx',
   'README.md',
   'docs/project-explanation.md',
   'docs/prototype.md',
@@ -59,6 +64,7 @@ for (const file of textFiles) {
 
 const indexHtml = readFileSync('index.html', 'utf8');
 const configuratorHtml = readFileSync('configurator.html', 'utf8');
+const summaryHtml = readFileSync('summary.html', 'utf8');
 const xml = readFileSync('src/data/configurator.xml', 'utf8');
 
 if (indexHtml.includes('/src/react/main.jsx')) {
@@ -67,6 +73,10 @@ if (indexHtml.includes('/src/react/main.jsx')) {
 
 if (!configuratorHtml.includes('/src/react/main.jsx')) {
   fail('configurator.html must mount the React configurator');
+}
+
+if (!summaryHtml.includes('/src/react/summaryEntry.jsx')) {
+  fail('summary.html must mount the React summary page');
 }
 
 const viteConfig = readFileSync('vite.config.js', 'utf8');

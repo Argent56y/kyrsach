@@ -3,7 +3,7 @@ import { useBuild } from './hooks/useBuild.js';
 import { useXmlData } from './hooks/useXmlData.js';
 
 function formatPrice(value, currency) {
-  return new Intl.NumberFormat('en-US', {
+  return new Intl.NumberFormat(currency === 'BYN' ? 'ru-BY' : 'en-US', {
     style: 'currency',
     currency,
     maximumFractionDigits: 0
@@ -45,6 +45,8 @@ export default function App() {
   }, [activeCategory, categories, focusedProductId]);
   const totalProducts = categories.reduce((sum, category) => sum + category.products.length, 0);
   const requiredCount = categories.filter(category => category.required).length;
+  const requiredSelectedCount = selectedItems.filter(item => item.category.required).length;
+  const isSummaryReady = requiredCount > 0 && requiredSelectedCount === requiredCount;
   const statusText = isLoading
     ? 'Загрузка XML-данных'
     : error
@@ -224,6 +226,23 @@ export default function App() {
                   <strong>{focusedProduct.name}</strong>
                   <p>{formatPrice(focusedProduct.price, data.meta.currency)} · {focusedProduct.specs}</p>
                 </div>
+              )}
+              <a
+                className={`build-summary__order${isSummaryReady ? '' : ' build-summary__order--disabled'}`}
+                href={isSummaryReady ? 'summary.html' : undefined}
+                aria-disabled={!isSummaryReady}
+                onClick={event => {
+                  if (!isSummaryReady) {
+                    event.preventDefault();
+                  }
+                }}
+              >
+                Итоговая сборка
+              </a>
+              {!isSummaryReady && (
+                <p className="build-summary__hint">
+                  Выберите обязательные разделы: {requiredSelectedCount}/{requiredCount}.
+                </p>
               )}
               <button className="build-summary__clear" type="button" onClick={clearBuild}>
                 Очистить сборку

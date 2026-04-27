@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFAQAccordion();
   initSliderNavigation();
   initNewsletterForm();
+  initSideNavSpy();
 });
 
 const xmlUrl = new URL('../data/configurator.xml', import.meta.url).href;
@@ -66,6 +67,7 @@ function loadCategoriesFromXML() {
       const parser = new DOMParser();
       const xmlDoc = parser.parseFromString(xmlString, 'application/xml');
       const categories = xmlDoc.querySelectorAll('category');
+      const currency = xmlDoc.querySelector('meta > currency')?.textContent.trim() || 'BYN';
 
       categories.forEach(category => {
         const name = category.querySelector('name').textContent;
@@ -73,7 +75,7 @@ function loadCategoriesFromXML() {
         const priceFrom = category.querySelector('price_from').textContent;
         const image = category.querySelector('image').textContent;
 
-        const card = createProductCard(name, icon, priceFrom, image);
+        const card = createProductCard(name, icon, priceFrom, image, currency);
         track.appendChild(card);
       });
     })
@@ -83,7 +85,15 @@ function loadCategoriesFromXML() {
     });
 }
 
-function createProductCard(name, icon, priceFrom, imageSrc) {
+function formatCatalogPrice(value, currency = 'BYN') {
+  return new Intl.NumberFormat(currency === 'BYN' ? 'ru-BY' : 'en-US', {
+    style: 'currency',
+    currency,
+    maximumFractionDigits: 0
+  }).format(Number(value));
+}
+
+function createProductCard(name, icon, priceFrom, imageSrc, currency = 'BYN') {
   const card = document.createElement('a');
   card.className = 'product-card';
   card.href = 'configurator.html';
@@ -97,7 +107,7 @@ function createProductCard(name, icon, priceFrom, imageSrc) {
     <div class="product-card__info">
       <div>
         <h3 class="product-card__name">${name}</h3>
-        <p class="product-card__price">от $${priceFrom}</p>
+        <p class="product-card__price">от ${formatCatalogPrice(priceFrom, currency)}</p>
       </div>
       <div class="product-card__icon">
         ${getIconMarkup(icon)}
@@ -114,16 +124,50 @@ function getIconMarkup(name) {
 
 function renderFallbackCategories(track) {
   const fallbackData = [
-    { name: 'Мониторы', icon: 'monitor', priceFrom: '499', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAAU1plefJY7ZxwM-6Q-4mzHqWZ2o2G-_fO3F2QIT9ooKrp1E8K5_LrIH21rqOsuMvfyjnnimiKdWJV8I-6VtCMVtkH8GGzH_2B_z3-GQRb1Rz8QePGBaZQrQ98BpoqONNQjSL81UFHaUm6w0c6HQ7-T8XXm5ZM6LixZTr7bAbvBeprCtaGLE1A3uIUldFpWP4O-dI9l3-6cHVA49jX-AJDmDtYtRE-kaZxySyIR_TaLkKtvNoredxz3V0LDk6vpJPr0FPeM9cGYQ' },
-    { name: 'Клавиатуры', icon: 'keyboard', priceFrom: '149', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBVulgQHeCjUvOs-Zx1wPkteq66WjlYpD7V2eCUjNQgHNuaXB8G2qCej4IPgsRcFNr3ApMn-sXJXcFqrUQtIYCkAhruCA2Csok7K872hHlDt-AUGRSIuyDRvO9YMwSP0xSeEzAu49B3MOWJ3NWzdLp1IcxH1EkwGfyTC9YuJEyedxttnrJkW1vI5Pa6neB3tq92rg_tnLtQJNWP7ZLKnaLoXAnm-nPRAsaYribsJqTuIpqFGqe-GTZePonhJ7y8y7Cqg-07yUCzFg' },
-    { name: 'Столы', icon: 'table_restaurant', priceFrom: '899', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCGDA88-xZURPqPhUqNKnx7RQ-bi1SYIrToZmCd6JvcUu39pBibfzo33geUKCws1PZek3q5xmyXY5S9ZIdgv0ZnaXWkpKZst4p9_9WD5MMsup3lb-H7DtowBWzHS5agGXu0eyup713sjk4WFUMDY0e9Lq_0fl_evGOiAKGCQsdkMA_jVo5wQwv9cElDKwJq9Qh6MHcqaI-cxShDL6C6lx28jmeFnif7p8nMQLVkLe95K-PmpMkWzOOCIGIsexODCu7SzKC-jXwEeQ' },
-    { name: 'Аудио', icon: 'headset', priceFrom: '299', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB3DgHriV2AV9T7F30zDN27b3p7KTc8Nb-H7Y5zF8QqBUQJO5juzK_LtBJ9p4mD6bt0AwP-XAFBgSXdBsuug1tBg0JSBJN1QhJVUKkpLtK9Uq0P-B432wRatkUPn52DIe2qUFK068-WLi5hFp2FlTpp4kc7aJwln54bI8uCcH_9urB9FTx-7fAtcMbTGk6D466fYAAzdfacfLTrVIs6NDvLYN4jMzq2oWxiWPfSq9zEzv6_GYBRh8Szm25XztVolFFmfi4iQqRz0A' }
+    { name: 'Мониторы', icon: 'monitor', priceFrom: '1407', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAAU1plefJY7ZxwM-6Q-4mzHqWZ2o2G-_fO3F2QIT9ooKrp1E8K5_LrIH21rqOsuMvfyjnnimiKdWJV8I-6VtCMVtkH8GGzH_2B_z3-GQRb1Rz8QePGBaZQrQ98BpoqONNQjSL81UFHaUm6w0c6HQ7-T8XXm5ZM6LixZTr7bAbvBeprCtaGLE1A3uIUldFpWP4O-dI9l3-6cHVA49jX-AJDmDtYtRE-kaZxySyIR_TaLkKtvNoredxz3V0LDk6vpJPr0FPeM9cGYQ' },
+    { name: 'Клавиатуры', icon: 'keyboard', priceFrom: '420', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBVulgQHeCjUvOs-Zx1wPkteq66WjlYpD7V2eCUjNQgHNuaXB8G2qCej4IPgsRcFNr3ApMn-sXJXcFqrUQtIYCkAhruCA2Csok7K872hHlDt-AUGRSIuyDRvO9YMwSP0xSeEzAu49B3MOWJ3NWzdLp1IcxH1EkwGfyTC9YuJEyedxttnrJkW1vI5Pa6neB3tq92rg_tnLtQJNWP7ZLKnaLoXAnm-nPRAsaYribsJqTuIpqFGqe-GTZePonhJ7y8y7Cqg-07yUCzFg' },
+    { name: 'Столы', icon: 'table_restaurant', priceFrom: '2535', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCGDA88-xZURPqPhUqNKnx7RQ-bi1SYIrToZmCd6JvcUu39pBibfzo33geUKCws1PZek3q5xmyXY5S9ZIdgv0ZnaXWkpKZst4p9_9WD5MMsup3lb-H7DtowBWzHS5agGXu0eyup713sjk4WFUMDY0e9Lq_0fl_evGOiAKGCQsdkMA_jVo5wQwv9cElDKwJq9Qh6MHcqaI-cxShDL6C6lx28jmeFnif7p8nMQLVkLe95K-PmpMkWzOOCIGIsexODCu7SzKC-jXwEeQ' },
+    { name: 'Аудио', icon: 'headset', priceFrom: '843', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB3DgHriV2AV9T7F30zDN27b3p7KTc8Nb-H7Y5zF8QqBUQJO5juzK_LtBJ9p4mD6bt0AwP-XAFBgSXdBsuug1tBg0JSBJN1QhJVUKkpLtK9Uq0P-B432wRatkUPn52DIe2qUFK068-WLi5hFp2FlTpp4kc7aJwln54bI8uCcH_9urB9FTx-7fAtcMbTGk6D466fYAAzdfacfLTrVIs6NDvLYN4jMzq2oWxiWPfSq9zEzv6_GYBRh8Szm25XztVolFFmfi4iQqRz0A' }
   ];
 
   fallbackData.forEach(item => {
     const card = createProductCard(item.name, item.icon, item.priceFrom, item.image);
     track.appendChild(card);
   });
+}
+
+function initSideNavSpy() {
+  const sideNav = document.getElementById('side-nav');
+  if (!sideNav || !('IntersectionObserver' in window)) return;
+
+  const links = Array.from(sideNav.querySelectorAll('.side-nav__link'));
+  const sections = links
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      links.forEach(item => {
+        item.classList.toggle('side-nav__link--active', item === link);
+      });
+    });
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${entry.target.id}`;
+        link.classList.toggle('side-nav__link--active', isActive);
+      });
+    });
+  }, {
+    rootMargin: '-35% 0px -55%',
+    threshold: 0.01
+  });
+
+  sections.forEach(section => observer.observe(section));
 }
 
 function initFAQAccordion() {

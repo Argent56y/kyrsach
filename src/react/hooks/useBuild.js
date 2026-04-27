@@ -1,29 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { checkCompatibility } from '../utils/compatibility.js';
 import { calculateTotal } from '../utils/price.js';
-
-const STORAGE_KEY = 'monospace-configurator-build';
-
-function readStoredSelection() {
-  try {
-    const value = window.localStorage.getItem(STORAGE_KEY);
-    return value ? JSON.parse(value) : {};
-  } catch {
-    return {};
-  }
-}
-
-function normalizeSelection(categories, selectedProductIds) {
-  return Object.fromEntries(
-    categories
-      .map(category => {
-        const selectedId = selectedProductIds[category.id];
-        const productExists = category.products.some(product => product.id === selectedId);
-        return productExists ? [category.id, selectedId] : null;
-      })
-      .filter(Boolean)
-  );
-}
+import { BUILD_STORAGE_KEY, normalizeSelection, readStoredSelection } from '../utils/buildStorage.js';
 
 export function useBuild(categories) {
   const [selectedProductIds, setSelectedProductIds] = useState(() => readStoredSelection());
@@ -34,7 +12,7 @@ export function useBuild(categories) {
   }, [categories]);
 
   useEffect(() => {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(selectedProductIds));
+    window.localStorage.setItem(BUILD_STORAGE_KEY, JSON.stringify(selectedProductIds));
   }, [selectedProductIds]);
 
   const selectedItems = useMemo(() => {
