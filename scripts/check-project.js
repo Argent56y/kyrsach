@@ -71,11 +71,19 @@ if (indexHtml.includes('/src/react/main.jsx')) {
   fail('index.html must stay independent from React');
 }
 
-if (!configuratorHtml.includes('/src/react/main.jsx')) {
+const hasConfiguratorEntry =
+  configuratorHtml.includes('/src/react/main.jsx') ||
+  /assets\/configurator-[\w-]+\.js/.test(configuratorHtml);
+
+const hasSummaryEntry =
+  summaryHtml.includes('/src/react/summaryEntry.jsx') ||
+  /assets\/summary-[\w-]+\.js/.test(summaryHtml);
+
+if (!hasConfiguratorEntry) {
   fail('configurator.html must mount the React configurator');
 }
 
-if (!summaryHtml.includes('/src/react/summaryEntry.jsx')) {
+if (!hasSummaryEntry) {
   fail('summary.html must mount the React summary page');
 }
 
