@@ -32,4 +32,5 @@ jobs:
           VALIDATE_MARKDOWN: false
           VALIDATE_XML: true
           VALIDATE_YAML: true
-          FILTER_REGEX_EXCLUDE: '(^dist/|^node_modules/|^stitch_setup_summary_page/)'
+          YAML_CONFIG_FILE: .yaml-lint.yml
+          FILTER_REGEX_EXCLUDE: '(^assets/|^dist/|^node_modules/|^stitch_setup_summary_page/)'
